@@ -1,0 +1,21 @@
+{
+  "name": "registro-fotografico-fiscalizacion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --host 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "vite": "^8.3.5"
+  },
+  "dependencies": {
+    "docx": "^9.15.0",
+    "file-saver": "^2.0.5"
+  }
+}

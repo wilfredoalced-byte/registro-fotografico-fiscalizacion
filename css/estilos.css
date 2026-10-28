@@ -1,0 +1,201 @@
+﻿:root {
+  font-family: Arial, sans-serif;
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: linear-gradient(120deg, #102b54, #1769aa);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+header p {
+  margin: 0;
+  color: #dbeafe;
+}
+
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 18px;
+}
+
+section {
+  background: white;
+  padding: 26px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px #0f172a12;
+}
+
+h2 {
+  color: #123c69;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 15px 0 6px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #3b82f6;
+}
+
+button {
+  background: #1769aa;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 12px 8px 4px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #104d80;
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+#galeria, #listaProyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 15px;
+  background: #f8fafc;
+}
+
+.tarjeta img, #vistaCaptura img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+#vistaCaptura, #vistaAnexo {
+  margin-top: 20px;
+}
+
+#mensaje {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  max-width: 350px;
+  z-index: 100;
+}
+
+#mensaje:not(:empty) {
+  background: #123c69;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px #0002;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 25px 15px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  main {
+    margin: 15px auto;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  button {
+    width: 100%;
+    margin: 8px 0;
+    min-height: 46px;
+  }
+
+  #galeria, #listaProyectos {
+    grid-template-columns: 1fr;
+  }
+}
+
+#barraFotos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#barraFotos button {
+  margin: 0;
+}
+
+#eliminarSeleccionada {
+  background: #b91c1c;
+}
+
+#estadoSeleccion {
+  font-size: 13px;
+  color: #475569;
+  font-weight: 600;
+}
+
+#galeria .tarjeta {
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#galeria .foto-seleccionada {
+  border: 2px solid #1769aa;
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px #1769aa20;
+}
+
+@media (max-width: 600px) {
+  #barraFotos button {
+    width: auto;
+    flex: 1;
+  }
+
+  #estadoSeleccion {
+    width: 100%;
+    text-align: center;
+  }
+}

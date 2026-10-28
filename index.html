@@ -1,0 +1,108 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registro Fotográfico de Fiscalización</title>
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- JavaScript como módulo ES -->
+  <script type="module" src="/js/app.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Registro Fotográfico de Fiscalización</h1>
+    <p>Control de evidencias fotográficas en campo</p>
+  </header>
+
+  <main>
+
+    <!-- DATOS DE LA FISCALIZACIÓN -->
+    <section>
+      <h2>Datos de la fiscalización</h2>
+
+      <form id="formProyecto">
+
+        <label for="codigo">Código de práctica</label>
+        <input id="codigo" required>
+
+        <label for="fecha">Fecha</label>
+        <input id="fecha" type="date" required>
+
+        <label for="lugar">Lugar</label>
+        <input id="lugar" required>
+
+        <label for="fiscalizador">Fiscalizador</label>
+        <input id="fiscalizador" required>
+
+        <label for="establecimiento">Establecimiento</label>
+        <input id="establecimiento" required>
+
+        <button type="submit">
+          Guardar fiscalización
+        </button>
+
+      </form>
+
+      <h3>Proyectos guardados</h3>
+      <div id="listaProyectos"></div>
+    </section>
+
+    <!-- REGISTRO DE FOTOGRAFÍAS -->
+    <section>
+      <h2>Registro de fotografías</h2>
+
+      <button id="btnCamara" type="button">
+        Tomar foto
+      </button>
+
+      <button id="btnAgregar" type="button">
+        Agregar imágenes
+      </button>
+
+      <input
+        id="inputCamara"
+        type="file"
+        accept="image/*"
+        capture="environment"
+        hidden
+      >
+
+      <input
+        id="inputImagenes"
+        type="file"
+        accept="image/*"
+        multiple
+        hidden
+      >
+
+      <div id="vistaCaptura"></div>
+      <div id="galeria"></div>
+    </section>
+
+    <!-- VISTA PREVIA Y EXPORTACIÓN WORD -->
+    <section>
+      <h2>Vista previa del anexo</h2>
+
+      <div id="vistaAnexo"></div>
+
+      <button id="btnWord" type="button">
+        Generar Word
+      </button>
+    </section>
+
+  </main>
+
+  <!-- MENSAJES DEL SISTEMA -->
+  <div
+    id="mensaje"
+    role="status"
+    aria-live="polite">
+  </div>
+
+</body>
+</html>
